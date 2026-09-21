@@ -19,3 +19,6 @@ cursor-plugin/host
 playwright-report
 test-results
 /tmp-smoke-*
+
+# Needs GitHub token workflow scope to push
+.github/workflows/
