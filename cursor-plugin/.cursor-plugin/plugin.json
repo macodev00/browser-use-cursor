@@ -1,0 +1,12 @@
+{
+  "name": "cursor-browser",
+  "version": "0.1.0",
+  "description": "Let Cursor agents use your real Chrome, Edge, Brave, Firefox, and other extension browsers.",
+  "author": {
+    "name": "browser-use-cursor"
+  },
+  "homepage": "https://macodev00.github.io/browser-use-cursor/",
+  "repository": "https://github.com/macodev00/browser-use-cursor",
+  "keywords": ["browser", "chrome", "firefox", "edge", "brave", "mcp"],
+  "logo": "assets/logo.svg"
+}

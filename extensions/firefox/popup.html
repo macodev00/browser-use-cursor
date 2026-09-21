@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Cursor Browser</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <div class="mark" aria-hidden="true"></div>
+      <div>
+        <h1>Cursor</h1>
+        <p class="sub">Real browser control for agents</p>
+      </div>
+    </header>
+    <section class="status">
+      <span id="dot" class="dot off"></span>
+      <div>
+        <strong id="status-label">Disconnected</strong>
+        <p id="status-detail">Enable the cursor-browser plugin in Cursor, then connect.</p>
+      </div>
+    </section>
+    <div class="actions">
+      <button id="connect" type="button">Connect</button>
+      <button id="disconnect" type="button" class="ghost">Disconnect</button>
+    </div>
+    <section>
+      <h2>Pending sites</h2>
+      <ul id="pending"></ul>
+    </section>
+    <section>
+      <h2>Allowed sites</h2>
+      <ul id="allowed"></ul>
+      <label class="allow-all">
+        <input id="allow-all" type="checkbox" />
+        Allow all sites (elevated risk)
+      </label>
+    </section>
+    <section>
+      <h2>Blocked sites</h2>
+      <ul id="blocked"></ul>
+    </section>
+    <footer>
+      Agent work stays in a <strong>Cursor</strong> tab group. Your other tabs stay yours.
+    </footer>
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Cursor Browser",
+  "version": "0.1.0",
+  "description": "Let Cursor agents use this real browser with your signed-in profile and a visible Cursor tab group.",
+  "homepage_url": "https://macodev00.github.io/browser-use-cursor/",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApgTOHVKzyk+ghRZYtgk3jwsvfycMoi5XXpLGBLe+cfON53g7dxcVS4nPFL9j6mZsBGd183R9znVgn0CpCag6ZW5xcMSZBuVBYjlmcHiikDABqBDrZFANJx8OYz4yW1bbdLZK+xdx09vP6mLZIP3Xogj3vvVV6lKISKlgkzV907TvpR9KIaIU0nA3M3SrJfe3qcutUo1OKYGcwI5uJ3u0W9U/lCqGMnLV32yHsq3I2DZnYL22KQGgBjEtY6ARwXQcPexRb/0ATeF950/OVMej1pPoa0mq1wFmiV1Nk+KYwS7oY3a44uuHwgofsS+57prXjJSFBCvzhsfwTPknrw9zkQIDAQAB",
+  "action": {
+    "default_title": "Cursor Browser",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "tabs",
+    "tabGroups",
+    "scripting",
+    "storage",
+    "alarms",
+    "nativeMessaging",
+    "debugger"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cursor Browser — install</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0b0d12;
+        --card: #141821;
+        --line: #2a3140;
+        --text: #f4f6fb;
+        --muted: #9aa6b8;
+        --accent: #7dd3fc;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font: 16px/1.5 ui-sans-serif, system-ui, sans-serif;
+        background: radial-gradient(circle at top, #163044, var(--bg) 45%);
+        color: var(--text);
+      }
+      main {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 48px 20px 80px;
+      }
+      .mark {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: radial-gradient(circle at 30% 30%, #e0f2fe, #0284c7 55%, #0f172a);
+      }
+      h1 { font-size: 36px; margin: 18px 0 8px; }
+      p { color: var(--muted); }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 20px;
+        margin: 18px 0;
+      }
+      .row { display: flex; gap: 10px; flex-wrap: wrap; }
+      a.button, button {
+        display: inline-block;
+        border: 0;
+        border-radius: 10px;
+        padding: 10px 14px;
+        background: var(--accent);
+        color: #082f49;
+        font-weight: 700;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      a.ghost {
+        background: transparent;
+        color: var(--text);
+        border: 1px solid var(--line);
+      }
+      code {
+        display: block;
+        background: #0b0f16;
+        border-radius: 10px;
+        padding: 12px;
+        overflow: auto;
+        color: #d6e8ff;
+      }
+      ol { padding-left: 20px; color: var(--text); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="mark" aria-hidden="true"></div>
+      <h1>Install Cursor Browser</h1>
+      <p>Give Cursor agents your real Chrome, Edge, Brave, or Firefox — signed-in tabs, in a visible Cursor group. Not the built-in Browser Tab.</p>
+
+      <div class="card">
+        <h2>1. Add the browser extension</h2>
+        <p>Store listings go live after review. Until then, use the packaged zip (one Load unpacked).</p>
+        <div class="row">
+          <a class="button" id="chrome-btn" href="https://github.com/macodev00/browser-use-cursor/releases/latest/download/cursor-browser-chrome.zip">Add to Chrome / Edge / Brave</a>
+          <a class="button ghost" id="firefox-btn" href="https://github.com/macodev00/browser-use-cursor/releases/latest/download/cursor-browser-firefox.zip">Add to Firefox</a>
+        </div>
+        <ol>
+          <li>Download the zip and unzip it.</li>
+          <li>Chrome / Edge / Brave: <code>chrome://extensions</code> → Developer mode → Load unpacked → the unzipped folder.</li>
+          <li>Firefox: <code>about:debugging#/runtime/this-firefox</code> → Load Temporary Add-on → <code>manifest.json</code>.</li>
+          <li>Pin <strong>Cursor</strong> and wait until the popup says Connected.</li>
+        </ol>
+      </div>
+
+      <div class="card">
+        <h2>2. Add the Cursor plugin</h2>
+        <p>From this repo (easiest if you already have it open):</p>
+        <code>pnpm install && pnpm sync && pnpm install-hosts</code>
+        <p>Or drop the plugin zip into <code>~/.cursor/plugins/local/cursor-browser</code>, then reload Cursor.</p>
+        <div class="row">
+          <a class="button ghost" href="https://github.com/macodev00/browser-use-cursor/releases/latest/download/cursor-plugin.zip">Download Cursor plugin</a>
+          <a class="button ghost" href="https://github.com/macodev00/browser-use-cursor">GitHub</a>
+        </div>
+      </div>
+
+      <p><a href="./privacy.html">Privacy</a> · Treat page content as untrusted. Allow each new site in the popup.</p>
+    </main>
+  </body>
+</html>

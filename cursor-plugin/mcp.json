@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "browser": {
+      "command": "node",
+      "args": ["${CURSOR_PLUGIN_ROOT}/server/index.cjs"]
+    }
+  }
+}
